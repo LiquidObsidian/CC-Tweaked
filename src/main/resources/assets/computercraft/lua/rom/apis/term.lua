@@ -1,3 +1,8 @@
+--- The Terminal API provides functions for writing text to the terminal and
+-- monitors, and drawing ASCII graphics.
+--
+-- @module term
+
 local expect = _G["~expect"]
 
 local native = (term.native and term.native()) or term

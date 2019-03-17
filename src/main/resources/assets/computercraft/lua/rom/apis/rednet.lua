@@ -1,6 +1,20 @@
+--- The Rednet API allows systems to communicate between each other without
+-- using redstone. It serves as a wrapper for the modem API, offering ease of
+-- functionality (particularly in regards to repeating signals) with some
+-- expense of fine control.
+--
+-- In order to send and receive data, a modem (either wired, wireless, or ender)
+-- is required. The data reaches any possible destinations immediately after
+-- sending it, but is range limited.
+--
+-- @module rednet
+
 local expect = _G["~expect"]
 
+--- The channel used by the Rednet API to @{broadcast} messages.
 CHANNEL_BROADCAST = 65535
+
+--- The channel used by the Rednet API to repeat messages.
 CHANNEL_REPEAT = 65533
 
 local tReceivedMessages = {}
