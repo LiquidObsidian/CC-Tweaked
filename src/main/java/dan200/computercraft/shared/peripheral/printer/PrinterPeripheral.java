@@ -51,7 +51,7 @@ public class PrinterPeripheral implements IPeripheral
     }
 
     @Override
-    public Object[] callMethod( @Nonnull IComputerAccess computer, @Nonnull ILuaContext context, int method, @Nonnull Object[] args ) throws LuaException
+    public Object[] callMethod( @Nonnull IComputerAccess computer, @Nonnull ILuaContext context, int method, @Nonnull Object[] args ) throws LuaException, InterruptedException
     {
         switch( method )
         {
@@ -89,10 +89,13 @@ public class PrinterPeripheral implements IPeripheral
                 return new Object[] { width, height };
             }
             case 4: // newPage
-                return new Object[] { m_printer.startNewPage() };
+                return context.executeMainThreadTask( () -> new Object[] { m_printer.startNewPage() } );
             case 5: // endPage
                 getCurrentPage();
-                return new Object[] { m_printer.endCurrentPage() };
+                return context.executeMainThreadTask( () -> {
+                    getCurrentPage();
+                    return new Object[] { m_printer.endCurrentPage() };
+                } );
             case 6: // getInkLevel
                 return new Object[] { m_printer.getInkLevel() };
             case 7:
@@ -126,10 +129,7 @@ public class PrinterPeripheral implements IPeripheral
     private Terminal getCurrentPage() throws LuaException
     {
         Terminal currentPage = m_printer.getCurrentPage();
-        if( currentPage == null )
-        {
-            throw new LuaException( "Page not started" );
-        }
+        if( currentPage == null ) throw new LuaException( "Page not started" );
         return currentPage;
     }
 }
