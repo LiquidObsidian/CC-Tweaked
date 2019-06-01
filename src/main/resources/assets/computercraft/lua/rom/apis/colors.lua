@@ -13,69 +13,69 @@
 
 local expect = _G["~expect"]
 
---- White. 0x1 in hexadecimal, displayed as `0` in paint files and `term.blit`,
--- has a default terminal colour of `#F0F0F0`.
-white = 1
+--- White: Displayed as `0` in paint files and `term.blit`, has a default
+-- terminal colour of `#F0F0F0`.
+white = 0x1
 
---- Orange. 0x2 in hexadecimal, displayed as `1` in paint files and `term.blit`,
--- has a default terminal colour of `#F2B233`.
-orange = 2
+--- Orange: Displayed as `1` in paint files and `term.blit`, has a
+-- default terminal colour of `#F2B233`.
+orange = 0x2
 
---- Magenta. 0x4 in hexadecimal, displayed as `2` in paint files and
--- `term.blit`, has a default terminal colour of `#E57FD8`.
-magenta = 4
+--- Magenta: Displayed as `2` in paint files and `term.blit`, has a
+-- default terminal colour of `#E57FD8`.
+magenta = 0x4
 
---- Light blue. 0x8 in hexadecimal, displayed as `3` in paint files and
--- `term.blit`, has a default terminal colour of `#99B2F2`.
-lightBlue = 8
+--- Light blue: Displayed as `3` in paint files and `term.blit`, has a
+-- default terminal colour of `#99B2F2`.
+lightBlue = 0x8
 
---- Yellow. 0x10 in hexadecimal, displayed as `4` in paint files and
--- `term.blit`, has a default terminal colour of `#DEDE6C`.
-yellow = 16
+--- Yellow: Displayed as `4` in paint files and `term.blit`, has a
+-- default terminal colour of `#DEDE6C`.
+yellow = 0x10
 
---- Lime. 0x20 in hexadecimal, displayed as `5` in paint files and `term.blit`,
--- has a default terminal colour of `#7FCC19`.
-lime = 32
+--- Lime: Displayed as `5` in paint files and `term.blit`, has a default
+-- terminal colour of `#7FCC19`.
+lime = 0x20
 
---- Pink. 0x40 in hexadecimal, displayed as `6` in paint files and `term.blit`,
--- has a default terminal colour of `#F2B2CC`.
-pink = 64
+--- Pink. Displayed as `6` in paint files and `term.blit`, has a default
+-- terminal colour of `#F2B2CC`.
+pink = 0x40
 
---- Gray. 0x80 in hexadecimal, displayed as `7` in paint files and `term.blit`,
--- has a default terminal colour of `#4C4C4C`.
-gray = 128
+--- Gray: Displayed as `7` in paint files and `term.blit`, has a default
+-- terminal colour of `#4C4C4C`.
+gray = 0x80
 
---- Light gray. 0x100 in hexadecimal, displayed as `8` in paint files and
--- `term.blit`, has a default terminal colour of `#999999`.
-lightGray = 256
+--- Light gray: Displayed as `8` in paint files and `term.blit`, has a
+-- default terminal colour of `#999999`.
+lightGray = 0x100
 
---- Cyan. 0x200 in hexadecimal, displayed as `9` in paint files and `term.blit`,
--- has a default terminal colour of `#4C99B2`.
-cyan = 512
+--- Cyan: Displayed as `9` in paint files and `term.blit`, has a default
+-- terminal colour of `#4C99B2`.
+cyan = 0x200
 
---- Purple. 0x400 in hexadecimal, displayed as `a` in paint files and
--- `term.blit`, has a default terminal colour of `#B266E5`.
-purple = 1024
+--- Purple: Displayed as `a` in paint files and `term.blit`, has a
+-- default terminal colour of `#B266E5`.
+purple = 0x400
 
---- Blue. 0x800 in hexadecimal, displayed as `b` in paint files and `term.blit`,
--- has a default terminal colour of `#3366CC`.
-blue = 2048
+--- Blue: Displayed as `b` in paint files and `term.blit`, has a default
+-- terminal colour of `#3366CC`.
+blue = 0x800
 
---- Brown. 0x1000 in hexadecimal, displayed as `c` in paint files and
--- `term.blit`, has a default terminal colour of `#7F664C`.
-brown = 4096
+--- Brown: Displayed as `c` in paint files and `term.blit`, has a default
+-- terminal colour of `#7F664C`.
+brown = 0x1000
 
---- Green. 0x2000 in hexadecimal, displayed as `d` in paint files and
--- `term.blit`, has a default terminal colour of `#57A64E`.
-green = 8192
+--- Green: Displayed as `d` in paint files and `term.blit`, has a default
+-- terminal colour of `#57A64E`.
+green = 0x2000
 
---- Red. 0x4000 in hexadecimal, displayed as `e` in paint files and
--- `term.blit`, has a default terminal colour of `#CC4C4C`.
-red = 16384
+--- Red: Displayed as `e` in paint files and `term.blit`, has a default
+-- terminal colour of `#CC4C4C`.
+red = 0x4000
 
---- Black. 0x8000 in hexadecimal, displayed as `f` in paint files and
--- `term.blit`, has a default terminal colour of `#191919`.
-black = 32768
+--- Black: Displayed as `f` in paint files and `term.blit`, has a default
+-- terminal colour of `#191919`.
+black = 0x8000
 
 --- Combines a set of colors (or sets of colors) into a larger set.
 --
