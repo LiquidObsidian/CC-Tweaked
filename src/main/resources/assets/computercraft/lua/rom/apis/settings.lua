@@ -15,7 +15,7 @@ local tSettings = {}
 -- @tparam string name The name of the setting to set
 -- @param value The setting's value. This cannot be `nil`, and must be
 -- serialisable by @{textutils.serialize}.
--- @throw If this value cannot be serialised
+-- @throws If this value cannot be serialised
 -- @see settings.unset
 function set( name, value )
     expect(1, name, "string")

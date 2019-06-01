@@ -60,10 +60,11 @@ local keys = _ENV
 for nKey, sKey in pairs( tKeys ) do
     keys[sKey] = nKey
 end
-keys["return"] = keys.enter
+
+keys["return"] = keys.enter --- @local
 --backwards compatibility to earlier, typo prone, versions
-keys.scollLock = keys.scrollLock
-keys.cimcumflex = keys.circumflex
+keys.scollLock = keys.scrollLock --- @local
+keys.cimcumflex = keys.circumflex --- @local
 
 --- Translates a numerical key code to a human-readable name. The human-readable
 -- name is one of the constants in the keys API.
